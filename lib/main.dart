@@ -17,8 +17,8 @@ class _MyAppState extends State<MyApp> {
   var rightDiceNumber = 1;
   void numberChanger() {
     setState(() {
-      leftDiceNumber = Random().nextInt(5) + 1;
-      rightDiceNumber = Random().nextInt(5) + 1;
+      leftDiceNumber = Random().nextInt(6) + 1;
+      rightDiceNumber = Random().nextInt(6) + 1;
     });
   }
 
@@ -45,8 +45,7 @@ class _MyAppState extends State<MyApp> {
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: GestureDetector(
-                    child:
-                        Image.asset('assets/images/part_$leftDiceNumber.png'),
+                    child: Image.asset('assets/images/dice$leftDiceNumber.png'),
                     onTap: () {
                       numberChanger();
                     },
@@ -61,7 +60,7 @@ class _MyAppState extends State<MyApp> {
                       numberChanger();
                     },
                     child:
-                        Image.asset('assets/images/part_$rightDiceNumber.png'),
+                        Image.asset('assets/images/dice$rightDiceNumber.png'),
                   ),
                 ),
               ),
