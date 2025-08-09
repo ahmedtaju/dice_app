@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:dice_app/gradient_container.dart';
 void main() {
   runApp(
-    MaterialApp(
+     MaterialApp(
       home: Scaffold(
-        body: GradientContainer(),
-        // backgroundColor: const Color.fromARGB(255, 184, 77, 255),
+        body: GradientContainer(const [Colors.deepPurple, Color.fromARGB(193, 113, 255, 77)]),
+
       ),
     ),
   );
 }
-
-
